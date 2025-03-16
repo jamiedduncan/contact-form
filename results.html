@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Results</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background-color: navy;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            width: 90%;
+            height: 90%;
+            background-color: skyblue; 
+            padding: 3%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+        }
+        img {
+            max-width: 20%; 
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="ducky.avif" alt="ducky">
+        <h1>Contact Form Submitted</h1>
+        <p><b>Email:</b> <span id="email"></span></p>
+        <p><b>Subject:</b> <span id="subject"></span></p>
+        <p><b>Message:</b> <span id="message"></span></p>
+    </div>
+    <script>
+        // Grab URL parameters
+        const params = new URLSearchParams(window.location.search);
+
+        // Insert values into the HTML
+        document.getElementById('email').textContent = params.get('email');
+        document.getElementById('subject').textContent = params.get('subject');
+        document.getElementById('message').textContent = params.get('message');
+    </script>
+</body>
+</html>
