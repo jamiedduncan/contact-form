@@ -4,25 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Contact</title>
-</head>
-<body style="background-color: skyblue;">
-    <form action="results.html" method="GET">
-        <div>
-            <align="left"></align><h1 class="h1Index">Contact Us</h1></align>
-            <p>Please fill in this form to contact us.</p>
-            <hr>
-            <div><label for="email"><b>Email</b></label>
-            <input type="email" placeholder="Enter Email" name="email" required></div>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container">
             
-            <div></div><label for="subject"><b>Subject</b></label>
-            <input type="text" placeholder="Enter Subject" name="subject" required></div>
+            <!-- Left column with the logo and title -->
+            <div class="left-column" class="center">
+                <img src="cloverlick.png" alt="Logo">
+                <h1 class="center">Contact Us</h1>
+                <p class="center">Please fill in this form to contact us.</p>
+            </div>
             
-            <div></div><label for="message"><b>Message</b></label>
-            <textarea placeholder="Enter Message" name="message" required></textarea></div>
-            
-            <div><button type="submit" class="registerbtn">Submit and see a duck</button></div>
+            <!-- Right column with the form -->
+            <div class="right-column">
+                <form action="results.html" method="GET">
+                    <div>
+                        <label for="fullName">Full Name</label>
+                        <input id="fullName" type="text" placeholder="Enter Full Name" name="fullName" required>
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input id="email" type="email" placeholder="Enter Email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="subject">Subject</label>
+                        <input id="subject" type="text" placeholder="Enter Subject" name="subject" required>
+                    </div>
+                    <div>
+                        <label for="message">Message</label>
+                        <textarea id="message" placeholder="Enter Message" name="message" required></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="submitButton">Submit</button>
+                    </div>
+                </form>
+            </div>
         </div>
-    </form>
-</body>
-</html>
+    </body>
+    </html>
+    
